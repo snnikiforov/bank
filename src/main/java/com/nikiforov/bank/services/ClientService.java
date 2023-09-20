@@ -3,13 +3,14 @@ package com.nikiforov.bank.services;
 import com.nikiforov.bank.dto.Client;
 import com.nikiforov.bank.model.ClientEntity;
 import com.nikiforov.bank.repositories.ClientRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 @Service
-
+@AllArgsConstructor
 public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
