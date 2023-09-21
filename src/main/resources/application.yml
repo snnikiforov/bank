@@ -4,7 +4,7 @@ spring:
     username: sa
     password: pastest
     driver-class-name: org.postgresql.Driver
-#feature:
-#  toggle:
-#    delete:
-#      client: true
+feature:
+  toggle:
+    delete:
+      client: true

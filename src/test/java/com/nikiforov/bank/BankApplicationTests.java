@@ -36,12 +36,13 @@ class BankApplicationTests {
 	void shouldThrow404() {
 		ClientRepository clientRepository = Mockito.mock(ClientRepository.class);
 		ClientEntity client = new ClientEntity(1l,"fioTest");
-		when( clientRepository.findById(anyLong())).thenThrow(new ResponseStatusException(HttpStatus.NOT_FOUND, "Клиент не найден с таким айди"));
+		when( clientRepository.findById(anyLong())).thenReturn(Optional.empty());
 		ClientService cl = new ClientService(clientRepository);
 		//ClientEntity result = cl.getClient(client.getId());
 
 		Assertions.assertThrows(ResponseStatusException.class,()->cl.getClient(client.getId()));
 
 	}
+
 
 }
