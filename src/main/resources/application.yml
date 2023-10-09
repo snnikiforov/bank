@@ -4,14 +4,14 @@ spring:
       name: bank
       password: test
   datasource:
-    #url: jdbc:postgresql://postgres:5432/sa
-    url: jdbc:postgresql://localhost:5432/sa
+    url: jdbc:postgresql://postgres:5432/sa
+    #url: jdbc:postgresql://localhost:5432/sa
     username: sa
     password: pastest
     driver-class-name: org.postgresql.Driver
   flyway:
-    #url: jdbc:postgresql://postgres:5432/sa
-    url: jdbc:postgresql://localhost:5432/sa
+    url: jdbc:postgresql://postgres:5432/sa
+    #url: jdbc:postgresql://localhost:5432/sa
     schemas: public
     user: sa
     password: pastest
