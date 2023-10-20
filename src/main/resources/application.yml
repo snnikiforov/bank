@@ -1,6 +1,25 @@
 spring:
+  security:
+    user:
+      name: bank
+      password: test
   datasource:
-    url: jdbc:postgresql://localhost:5432/sa
+    url: jdbc:postgresql://postgres:5432/sa
+    #url: jdbc:postgresql://localhost:5432/sa
     username: sa
     password: pastest
     driver-class-name: org.postgresql.Driver
+  flyway:
+    url: jdbc:postgresql://postgres:5432/sa
+    #url: jdbc:postgresql://localhost:5432/sa
+    schemas: public
+    user: sa
+    password: pastest
+    driver-class-name: org.postgresql.Driver
+    locations: classpath:/migration
+feature:
+  toggle:
+    delete:
+      client: true
+
+
