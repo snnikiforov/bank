@@ -22,4 +22,7 @@ public class ClientEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "test")
     private Long id;
     private String fio;
+    private String userName;
+    private String eMail;
+    private String hashPassword;
 }
