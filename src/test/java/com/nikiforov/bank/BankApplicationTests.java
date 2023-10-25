@@ -23,7 +23,7 @@ class BankApplicationTests {
 	@Test
 	void shouldReturnClient() {
 		ClientRepository clientRepository = Mockito.mock(ClientRepository.class);
-		ClientEntity client = new ClientEntity(1l,"fioTest");
+		ClientEntity client = new ClientEntity(1l,"fioTest","usernametest","ss@dd.ru","df");
 		when( clientRepository.findById(anyLong())).thenReturn(Optional.of(client));
 		ClientService cl = new ClientService(clientRepository);
 		ClientEntity result = cl.getClient(client.getId());
@@ -35,7 +35,7 @@ class BankApplicationTests {
 	@Test
 	void shouldThrow404() {
 		ClientRepository clientRepository = Mockito.mock(ClientRepository.class);
-		ClientEntity client = new ClientEntity(1l,"fioTest");
+		ClientEntity client = new ClientEntity(1l,"fioTest","usernametest","ss@dd.ru","df");
 		when( clientRepository.findById(anyLong())).thenReturn(Optional.empty());
 		ClientService cl = new ClientService(clientRepository);
 		//ClientEntity result = cl.getClient(client.getId());
